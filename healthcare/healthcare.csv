@@ -1,0 +1,101 @@
+Provider,Patient,Specialization,Location,Bio,Patient_Age,Patient_Gender,Patient_Condition
+Dr. Jessica Lee,Eva Blue,Pediatrics,Los Angeles,Dr. Jessica Lee is a dermatologist focused on skin cancer treatment and prevention.,66,Male,Asthma
+Dr. Michael Brown,Alice Brown,Pediatrics,Los Angeles,Dr. Michael Brown is an orthopedic surgeon with expertise in joint replacement.,59,Female,Osteoarthritis
+Dr. Jessica Lee,Grace Red,Pediatrics,New York,Dr. Jessica Lee is a dermatologist focused on skin cancer treatment and prevention.,72,Male,Eczema
+Dr. Emily Davis,Frank Yellow,Pediatrics,New York,Dr. Emily Davis specializes in neurology and has published numerous research papers.,78,Female,Epilepsy
+Dr. John Smith,David Black,Cardiology,Los Angeles,Dr. John Smith is a renowned cardiologist with over 20 years of experience.,32,Female,Hypertension
+Dr. Jessica Lee,Bob White,Pediatrics,Phoenix,Dr. Jessica Lee is a dermatologist focused on skin cancer treatment and prevention.,99,Female,Psoriasis
+Dr. Sarah Johnson,Grace Red,Dermatology,Houston,Dr. Sarah Johnson is a pediatrician known for her compassionate care.,90,Male,Acne
+Dr. Sarah Johnson,Grace Red,Pediatrics,Phoenix,Dr. Sarah Johnson is a pediatrician known for her compassionate care.,54,Male,ADHD
+Dr. John Smith,Frank Yellow,Orthopedics,New York,Dr. John Smith is a renowned cardiologist with over 20 years of experience.,11,Female,Scoliosis
+Dr. John Smith,Frank Yellow,Cardiology,New York,Dr. John Smith is a renowned cardiologist with over 20 years of experience.,2,Female,Heart Murmur
+Dr. Emily Davis,Grace Red,Orthopedics,New York,Dr. Emily Davis specializes in neurology and has published numerous research papers.,16,Female,Back Pain
+Dr. John Smith,David Black,Pediatrics,Los Angeles,Dr. John Smith is a renowned cardiologist with over 20 years of experience.,76,Female,Asthma
+Dr. Jessica Lee,Alice Brown,Neurology,New York,Dr. Jessica Lee is a dermatologist focused on skin cancer treatment and prevention.,38,Female,Migraine
+Dr. Emily Davis,Grace Red,Dermatology,Chicago,Dr. Emily Davis specializes in neurology and has published numerous research papers.,54,Male,Rosacea
+Dr. Jessica Lee,Frank Yellow,Cardiology,Phoenix,Dr. Jessica Lee is a dermatologist focused on skin cancer treatment and prevention.,16,Male,Hypertension
+Dr. Emily Davis,Eva Blue,Orthopedics,Chicago,Dr. Emily Davis specializes in neurology and has published numerous research papers.,52,Male,Arthritis
+Dr. Jessica Lee,Bob White,Dermatology,New York,Dr. Jessica Lee is a dermatologist focused on skin cancer treatment and prevention.,86,Female,Psoriasis
+Dr. John Smith,Alice Brown,Cardiology,New York,Dr. John Smith is a renowned cardiologist with over 20 years of experience.,4,Female,Congenital Heart Disease
+Dr. John Smith,Frank Yellow,Cardiology,Phoenix,Dr. John Smith is a renowned cardiologist with over 20 years of experience.,51,Male,Coronary Artery Disease
+Dr. Emily Davis,Charlie Green,Pediatrics,Phoenix,Dr. Emily Davis specializes in neurology and has published numerous research papers.,49,Female,ADHD
+Dr. Jessica Lee,Frank Yellow,Orthopedics,New York,Dr. Jessica Lee is a dermatologist focused on skin cancer treatment and prevention.,27,Female,Fracture
+Dr. Jessica Lee,Bob White,Orthopedics,Los Angeles,Dr. Jessica Lee is a dermatologist focused on skin cancer treatment and prevention.,73,Male,Osteoporosis
+Dr. Jessica Lee,David Black,Pediatrics,Phoenix,Dr. Jessica Lee is a dermatologist focused on skin cancer treatment and prevention.,87,Female,Asthma
+Dr. Sarah Johnson,Bob White,Pediatrics,New York,Dr. Sarah Johnson is a pediatrician known for her compassionate care.,53,Female,ADHD
+Dr. John Smith,Alice Brown,Cardiology,Los Angeles,Dr. John Smith is a renowned cardiologist with over 20 years of experience.,36,Male,Hypertension
+Dr. Sarah Johnson,David Black,Cardiology,Houston,Dr. Sarah Johnson is a pediatrician known for her compassionate care.,84,Male,Arrhythmia
+Dr. Michael Brown,Bob White,Neurology,New York,Dr. Michael Brown is an orthopedic surgeon with expertise in joint replacement.,70,Male,Parkinson's Disease
+Dr. Sarah Johnson,Charlie Green,Neurology,Los Angeles,Dr. Sarah Johnson is a pediatrician known for her compassionate care.,6,Male,Epilepsy
+Dr. Sarah Johnson,Eva Blue,Cardiology,Los Angeles,Dr. Sarah Johnson is a pediatrician known for her compassionate care.,38,Female,Heart Disease
+Dr. Jessica Lee,Frank Yellow,Neurology,Houston,Dr. Jessica Lee is a dermatologist focused on skin cancer treatment and prevention.,94,Male,Stroke
+Dr. Jessica Lee,Charlie Green,Dermatology,Los Angeles,Dr. Jessica Lee is a dermatologist focused on skin cancer treatment and prevention.,47,Male,Eczema
+Dr. Jessica Lee,Frank Yellow,Cardiology,New York,Dr. Jessica Lee is a dermatologist focused on skin cancer treatment and prevention.,21,Female,Heart Failure
+Dr. Jessica Lee,Frank Yellow,Cardiology,Chicago,Dr. Jessica Lee is a dermatologist focused on skin cancer treatment and prevention.,95,Male,Coronary Artery Disease
+Dr. Michael Brown,Frank Yellow,Neurology,Chicago,Dr. Michael Brown is an orthopedic surgeon with expertise in joint replacement.,19,Male,Migraine
+Dr. Sarah Johnson,Frank Yellow,Orthopedics,Los Angeles,Dr. Sarah Johnson is a pediatrician known for her compassionate care.,57,Male,Arthritis
+Dr. Michael Brown,Frank Yellow,Orthopedics,New York,Dr. Michael Brown is an orthopedic surgeon with expertise in joint replacement.,63,Female,Osteoporosis
+Dr. Jessica Lee,David Black,Orthopedics,Houston,Dr. Jessica Lee is a dermatologist focused on skin cancer treatment and prevention.,23,Female,Scoliosis
+Dr. Emily Davis,Eva Blue,Orthopedics,Chicago,Dr. Emily Davis specializes in neurology and has published numerous research papers.,89,Male,Back Pain
+Dr. Michael Brown,David Black,Cardiology,Chicago,Dr. Michael Brown is an orthopedic surgeon with expertise in joint replacement.,28,Female,Heart Disease
+Dr. Jessica Lee,Grace Red,Neurology,New York,Dr. Jessica Lee is a dermatologist focused on skin cancer treatment and prevention.,18,Female,Stroke
+Dr. Sarah Johnson,Alice Brown,Dermatology,Phoenix,Dr. Sarah Johnson is a pediatrician known for her compassionate care.,20,Male,Acne
+Dr. Jessica Lee,David Black,Neurology,Phoenix,Dr. Jessica Lee is a dermatologist focused on skin cancer treatment and prevention.,95,Male,Parkinson's Disease
+Dr. Michael Brown,Alice Brown,Cardiology,Los Angeles,Dr. Michael Brown is an orthopedic surgeon with expertise in joint replacement.,17,Male,Hypertension
+Dr. Emily Davis,David Black,Orthopedics,Phoenix,Dr. Emily Davis specializes in neurology and has published numerous research papers.,26,Male,Fracture
+Dr. Jessica Lee,Alice Brown,Cardiology,Chicago,Dr. Jessica Lee is a dermatologist focused on skin cancer treatment and prevention.,11,Female,Heart Murmur
+Dr. Emily Davis,Grace Red,Dermatology,Los Angeles,Dr. Emily Davis specializes in neurology and has published numerous research papers.,24,Female,Rosacea
+Dr. Michael Brown,David Black,Cardiology,Los Angeles,Dr. Michael Brown is an orthopedic surgeon with expertise in joint replacement.,54,Female,Arrhythmia
+Dr. John Smith,Eva Blue,Dermatology,Chicago,Dr. John Smith is a renowned cardiologist with over 20 years of experience.,6,Female,Eczema
+Dr. John Smith,Alice Brown,Pediatrics,Phoenix,Dr. John Smith is a renowned cardiologist with over 20 years of experience.,42,Female,Asthma
+Dr. Jessica Lee,Alice Brown,Cardiology,Phoenix,Dr. Jessica Lee is a dermatologist focused on skin cancer treatment and prevention.,85,Female,Heart Disease
+Dr. Jessica Lee,David Black,Neurology,New York,Dr. Jessica Lee is a dermatologist focused on skin cancer treatment and prevention.,9,Male,Epilepsy
+Dr. Michael Brown,Frank Yellow,Cardiology,Houston,Dr. Michael Brown is an orthopedic surgeon with expertise in joint replacement.,45,Male,Coronary Artery Disease
+Dr. Sarah Johnson,Frank Yellow,Pediatrics,Houston,Dr. Sarah Johnson is a pediatrician known for her compassionate care.,54,Male,ADHD
+Dr. Jessica Lee,Alice Brown,Neurology,New York,Dr. Jessica Lee is a dermatologist focused on skin cancer treatment and prevention.,93,Male,Parkinson's Disease
+Dr. John Smith,Frank Yellow,Neurology,Chicago,Dr. John Smith is a renowned cardiologist with over 20 years of experience.,84,Male,Stroke
+Dr. Michael Brown,Bob White,Pediatrics,Chicago,Dr. Michael Brown is an orthopedic surgeon with expertise in joint replacement.,4,Female,Asthma
+Dr. John Smith,David Black,Cardiology,New York,Dr. John Smith is a renowned cardiologist with over 20 years of experience.,49,Male,Hypertension
+Dr. John Smith,Frank Yellow,Cardiology,Los Angeles,Dr. John Smith is a renowned cardiologist with over 20 years of experience.,81,Male,Heart Failure
+Dr. Jessica Lee,Bob White,Orthopedics,Phoenix,Dr. Jessica Lee is a dermatologist focused on skin cancer treatment and prevention.,3,Female,Fracture
+Dr. Jessica Lee,Eva Blue,Cardiology,Phoenix,Dr. Jessica Lee is a dermatologist focused on skin cancer treatment and prevention.,86,Female,Coronary Artery Disease
+Dr. Sarah Johnson,Eva Blue,Neurology,Phoenix,Dr. Sarah Johnson is a pediatrician known for her compassionate care.,57,Male,Epilepsy
+Dr. Jessica Lee,Bob White,Neurology,Los Angeles,Dr. Jessica Lee is a dermatologist focused on skin cancer treatment and prevention.,30,Male,Parkinson's Disease
+Dr. Emily Davis,Charlie Green,Neurology,Houston,Dr. Emily Davis specializes in neurology and has published numerous research papers.,13,Female,Epilepsy
+Dr. Sarah Johnson,Eva Blue,Dermatology,Houston,Dr. Sarah Johnson is a pediatrician known for her compassionate care.,16,Female,Acne
+Dr. Emily Davis,Grace Red,Cardiology,Chicago,Dr. Emily Davis specializes in neurology and has published numerous research papers.,59,Male,Heart Disease
+Dr. John Smith,Bob White,Pediatrics,Houston,Dr. John Smith is a renowned cardiologist with over 20 years of experience.,91,Female,Asthma
+Dr. Emily Davis,Grace Red,Neurology,Phoenix,Dr. Emily Davis specializes in neurology and has published numerous research papers.,4,Male,Epilepsy
+Dr. Michael Brown,Frank Yellow,Neurology,New York,Dr. Michael Brown is an orthopedic surgeon with expertise in joint replacement.,54,Female,Migraine
+Dr. Sarah Johnson,David Black,Neurology,Chicago,Dr. Sarah Johnson is a pediatrician known for her compassionate care.,72,Male,Parkinson's Disease
+Dr. John Smith,Grace Red,Dermatology,Houston,Dr. John Smith is a renowned cardiologist with over 20 years of experience.,44,Male,Eczema
+Dr. Sarah Johnson,David Black,Dermatology,Los Angeles,Dr. Sarah Johnson is a pediatrician known for her compassionate care.,93,Male,Rosacea
+Dr. John Smith,Alice Brown,Orthopedics,Los Angeles,Dr. John Smith is a renowned cardiologist with over 20 years of experience.,39,Male,Osteoporosis
+Dr. Emily Davis,Eva Blue,Neurology,Phoenix,Dr. Emily Davis specializes in neurology and has published numerous research papers.,68,Male,Parkinson's Disease
+Dr. Sarah Johnson,Alice Brown,Pediatrics,Los Angeles,Dr. Sarah Johnson is a pediatrician known for her compassionate care.,35,Female,Asthma
+Dr. Sarah Johnson,David Black,Neurology,Phoenix,Dr. Sarah Johnson is a pediatrician known for her compassionate care.,63,Male,Parkinson's Disease
+Dr. Emily Davis,Grace Red,Dermatology,Houston,Dr. Emily Davis specializes in neurology and has published numerous research papers.,1,Female,Acne
+Dr. Emily Davis,Frank Yellow,Dermatology,Chicago,Dr. Emily Davis specializes in neurology and has published numerous research papers.,16,Male,Rosacea
+Dr. Jessica Lee,David Black,Orthopedics,Chicago,Dr. Jessica Lee is a dermatologist focused on skin cancer treatment and prevention.,5,Male,Scoliosis
+Dr. John Smith,Charlie Green,Dermatology,Phoenix,Dr. John Smith is a renowned cardiologist with over 20 years of experience.,51,Female,Eczema
+Dr. Emily Davis,Frank Yellow,Neurology,Los Angeles,Dr. Emily Davis specializes in neurology and has published numerous research papers.,47,Male,Stroke
+Dr. Sarah Johnson,Frank Yellow,Neurology,Houston,Dr. Sarah Johnson is a pediatrician known for her compassionate care.,81,Female,Epilepsy
+Dr. John Smith,Grace Red,Neurology,Chicago,Dr. John Smith is a renowned cardiologist with over 20 years of experience.,56,Male,Stroke
+Dr. Sarah Johnson,Charlie Green,Pediatrics,Chicago,Dr. Sarah Johnson is a pediatrician known for her compassionate care.,7,Male,ADHD
+Dr. Jessica Lee,Frank Yellow,Cardiology,New York,Dr. Jessica Lee is a dermatologist focused on skin cancer treatment and prevention.,27,Female,Heart Disease
+Dr. John Smith,Alice Brown,Dermatology,Chicago,Dr. John Smith is a renowned cardiologist with over 20 years of experience.,72,Female,Eczema
+Dr. Jessica Lee,Eva Blue,Dermatology,Phoenix,Dr. Jessica Lee is a dermatologist focused on skin cancer treatment and prevention.,37,Male,Psoriasis
+Dr. Jessica Lee,Eva Blue,Neurology,Phoenix,Dr. Jessica Lee is a dermatologist focused on skin cancer treatment and prevention.,32,Female,Epilepsy
+Dr. Jessica Lee,Grace Red,Orthopedics,Los Angeles,Dr. Jessica Lee is a dermatologist focused on skin cancer treatment and prevention.,87,Male,Fracture
+Dr. John Smith,Eva Blue,Neurology,Phoenix,Dr. John Smith is a renowned cardiologist with over 20 years of experience.,85,Female,Stroke
+Dr. Jessica Lee,Eva Blue,Pediatrics,Chicago,Dr. Jessica Lee is a dermatologist focused on skin cancer treatment and prevention.,56,Male,Asthma
+Dr. Jessica Lee,Bob White,Neurology,Houston,Dr. Jessica Lee is a dermatologist focused on skin cancer treatment and prevention.,46,Male,Migraine
+Dr. John Smith,David Black,Orthopedics,Phoenix,Dr. John Smith is a renowned cardiologist with over 20 years of experience.,69,Female,Fracture
+Dr. Emily Davis,Frank Yellow,Dermatology,Los Angeles,Dr. Emily Davis specializes in neurology and has published numerous research papers.,77,Male,Rosacea
+Dr. Emily Davis,Bob White,Neurology,Los Angeles,Dr. Emily Davis specializes in neurology and has published numerous research papers.,53,Male,Parkinson's Disease
+Dr. Sarah Johnson,Charlie Green,Dermatology,Phoenix,Dr. Sarah Johnson is a pediatrician known for her compassionate care.,97,Male,Acne
+Dr. Sarah Johnson,Grace Red,Orthopedics,Los Angeles,Dr. Sarah Johnson is a pediatrician known for her compassionate care.,88,Male,Osteoporosis
+Dr. John Smith,Grace Red,Cardiology,Phoenix,Dr. John Smith is a renowned cardiologist with over 20 years of experience.,13,Female,Heart Disease
+Dr. John Smith,Charlie Green,Orthopedics,Phoenix,Dr. John Smith is a renowned cardiologist with over 20 years of experience.,56,Female,Fracture
+Dr. Michael Brown,Charlie Green,Neurology,Houston,Dr. Michael Brown is an orthopedic surgeon with expertise in joint replacement.,95,Male,Parkinson's Disease
+Dr. Sarah Johnson,David Black,Cardiology,Chicago,Dr. Sarah Johnson is a pediatrician known for her compassionate care.,63,Male,Coronary Artery Disease
