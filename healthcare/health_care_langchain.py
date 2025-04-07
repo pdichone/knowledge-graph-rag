@@ -1,6 +1,7 @@
 from dotenv import load_dotenv
 import os
-from langchain_community.graphs import Neo4jGraph
+from langchain_neo4j import Neo4jGraph #GraphCypherQAChain
+# from langchain_community.graphs import Neo4jGraph
 
 load_dotenv()
 
@@ -8,7 +9,6 @@ AURA_INSTANCENAME = os.environ["AURA_INSTANCENAME"]
 NEO4J_URI = os.environ["NEO4J_URI"]
 NEO4J_USERNAME = os.environ["NEO4J_USERNAME"]
 NEO4J_PASSWORD = os.environ["NEO4J_PASSWORD"]
-NEO4J_DATABASE = os.environ["NEO4J_DATABASE"]
 AUTH = (NEO4J_USERNAME, NEO4J_PASSWORD)
 
 
@@ -16,8 +16,7 @@ kg = Neo4jGraph(
     url=NEO4J_URI,
     username=NEO4J_USERNAME,
     password=NEO4J_PASSWORD,
-    database=NEO4J_DATABASE,
-)
+) # database=NEO4J_DATABASE,
 
 cypher = """
   MATCH (n) 
