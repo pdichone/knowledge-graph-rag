@@ -7,18 +7,17 @@ from neo4j import GraphDatabase
 load_dotenv()
 
 # Get environment variables
-AURA_INSTANCENAME = os.getenv("AURA_INSTANCENAME")
-NEO4J_URI = os.getenv("NEO4J_URI")
-NEO4J_USERNAME = os.getenv("NEO4J_USERNAME")
-NEO4J_PASSWORD = os.getenv("NEO4J_PASSWORD")
-NEO4J_DATABASE = os.getenv("NEO4J_DATABASE")
+AURA_INSTANCENAME = os.environ["AURA_INSTANCENAME"]
+NEO4J_URI = os.environ["NEO4J_URI"]
+NEO4J_USERNAME = os.environ["NEO4J_USERNAME"]
+NEO4J_PASSWORD = os.environ["NEO4J_PASSWORD"]
 AUTH = (NEO4J_USERNAME, NEO4J_PASSWORD)
 
 
 # Function to connect and run a Cypher query
 def execute_query(driver, cypher_query, parameters=None):
     try:
-        with driver.session(database=NEO4J_DATABASE) as session:
+        with driver.session() as session: #database=NEO4J_DATABASE
             session.run(cypher_query, parameters)
     except Exception as e:
         print(f"Error: {e}")
@@ -97,7 +96,7 @@ def create_relationships(driver, provider, patient, specialization, location):
 def main():
     driver = GraphDatabase.driver(NEO4J_URI, auth=AUTH)
 
-    with open("healthcare.csv", mode="r") as file:
+    with open("/home/badrinarayan/supercharge_ai_with_knowledge_graphs_rag_system_mastery_new_udemy_course/knowledge-graph-rag/knowledge-graph-rag/healthcare/healthcare.csv", mode="r") as file:
         reader = csv.DictReader(file)
         print("Reading CSV file...")
 

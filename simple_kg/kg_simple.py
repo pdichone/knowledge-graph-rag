@@ -4,21 +4,17 @@ from neo4j import GraphDatabase
 
 load_dotenv()
 
-
 AURA_INSTANCENAME = os.environ["AURA_INSTANCENAME"]
 NEO4J_URI = os.environ["NEO4J_URI"]
 NEO4J_USERNAME = os.environ["NEO4J_USERNAME"]
 NEO4J_PASSWORD = os.environ["NEO4J_PASSWORD"]
-NEO4J_DATABASE = os.environ["NEO4J_DATABASE"]
 AUTH = (NEO4J_USERNAME, NEO4J_PASSWORD)
 
-driver = GraphDatabase.driver(NEO4J_URI, auth=AUTH, database=NEO4J_DATABASE)
-
+driver = GraphDatabase.driver(NEO4J_URI, auth=AUTH)
 
 def connect_and_query():
-    # driver = GraphDatabase.driver(NEO4J_URI, auth=AUTH)
     try:
-        with driver.session(database=NEO4J_DATABASE) as session:
+        with driver.session() as session:
             result = session.run("MATCH (n) RETURN count(n)")
             count = result.single().value()
             print(f"Number of nodes: {count}")
@@ -26,7 +22,6 @@ def connect_and_query():
         print(f"Error: {e}")
     finally:
         driver.close()
-
 
 def create_entities(tx):
     # Create Albert Einstein node
@@ -77,7 +72,7 @@ def create_relationships(tx):
 def query_graph_simple(cypher_query):
     driver = GraphDatabase.driver(NEO4J_URI, auth=AUTH)
     try:
-        with driver.session(database=NEO4J_DATABASE) as session:
+        with driver.session() as session: #database=NEO4J_DATABASE
             result = session.run(cypher_query)
             for record in result:
                 print(record["name"])
@@ -91,7 +86,7 @@ def query_graph_simple(cypher_query):
 def query_graph(cypher_query):
     driver = GraphDatabase.driver(NEO4J_URI, auth=AUTH)
     try:
-        with driver.session(database=NEO4J_DATABASE) as session:
+        with driver.session() as session: #database=NEO4J_DATABASE
             result = session.run(cypher_query)
             for record in result:
                 print(record["path"])
@@ -105,7 +100,7 @@ def build_knowledge_graph():
     # Open a session with the Neo4j database
 
     try:
-        with driver.session(database=NEO4J_DATABASE) as session:
+        with driver.session() as session: #database=NEO4J_DATABASE
             # Create entities
             session.execute_write(create_entities)
             # Create relationships
@@ -116,6 +111,8 @@ def build_knowledge_graph():
     finally:
         driver.close()
 
+# if __name__ == "__main__":
+#     build_knowledge_graph()
 
 # Cypher query to find paths related to Albert Einstein
 einstein_query = """
@@ -148,6 +145,6 @@ if __name__ == "__main__":
     query_graph(einstein_query)
 
 
-# Run this to see the entire graph in the neo4j browser/console
-# MATCH (n)-[r]->(m)
-# RETURN n, r, m;
+# # Run this to see the entire graph in the neo4j browser/console
+# # MATCH (n)-[r]->(m)
+# # RETURN n, r, m;
