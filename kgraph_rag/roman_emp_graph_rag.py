@@ -1,6 +1,6 @@
 from dotenv import load_dotenv
 import os
-from langchain_community.graphs import Neo4jGraph
+from langchain_neo4j import Neo4jGraph
 
 from langchain_core.runnables import (
     RunnableBranch,
@@ -10,25 +10,19 @@ from langchain_core.runnables import (
 )
 from langchain_core.prompts import ChatPromptTemplate
 from langchain_core.prompts.prompt import PromptTemplate
-from langchain_core.pydantic_v1 import BaseModel, Field
+from pydantic import BaseModel, Field
+# from langchain_core.pydantic_v1 import BaseModel, Field
 from typing import Tuple, List
 from langchain_core.messages import AIMessage, HumanMessage
 from langchain_core.output_parsers import StrOutputParser
-import os
-from langchain_community.graphs import Neo4jGraph
 from langchain_community.document_loaders import WikipediaLoader
 from langchain.text_splitter import TokenTextSplitter
 from langchain_openai import ChatOpenAI
 from langchain_experimental.graph_transformers import LLMGraphTransformer
 
-
-from langchain_community.vectorstores import Neo4jVector
+from langchain_neo4j import Neo4jVector
 from langchain_openai import OpenAIEmbeddings
-from langchain_community.vectorstores.neo4j_vector import remove_lucene_chars
-from langchain_core.runnables import (
-    RunnableParallel,
-    RunnablePassthrough,
-)
+from langchain_neo4j.vectorstores.neo4j_vector import remove_lucene_chars
 
 load_dotenv()
 
@@ -36,41 +30,39 @@ AURA_INSTANCENAME = os.environ["AURA_INSTANCENAME"]
 NEO4J_URI = os.environ["NEO4J_URI"]
 NEO4J_USERNAME = os.environ["NEO4J_USERNAME"]
 NEO4J_PASSWORD = os.environ["NEO4J_PASSWORD"]
-NEO4J_DATABASE = os.environ["NEO4J_DATABASE"]
 AUTH = (NEO4J_USERNAME, NEO4J_PASSWORD)
 
 OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
 OPENAI_ENDPOINT = os.getenv("OPENAI_ENDPOINT")
 
-chat = ChatOpenAI(api_key=OPENAI_API_KEY, temperature=0, model="gpt-3.5-turbo")
+chat = ChatOpenAI(api_key=OPENAI_API_KEY, temperature=0, model="gpt-4o-mini")
 
 
 kg = Neo4jGraph(
     url=NEO4J_URI,
     username=NEO4J_USERNAME,
     password=NEO4J_PASSWORD,
-    database=NEO4J_DATABASE,
-)
+) #database=NEO4J_DATABASE,
 
-# # read the wikipedia page for the Roman Empire
-raw_documents = WikipediaLoader(query="The Roman empire").load()
+# # # read the wikipedia page for the Roman Empire
+# raw_documents = WikipediaLoader(query="The Roman empire").load()
 
+# # # # # Define chunking strategy
+# text_splitter = TokenTextSplitter(chunk_size=512, chunk_overlap=24)
+# documents = text_splitter.split_documents(raw_documents[:3])
+# print(documents)
 
-# # # # Define chunking strategy
-text_splitter = TokenTextSplitter(chunk_size=512, chunk_overlap=24)
-documents = text_splitter.split_documents(raw_documents[:3])
-print(documents)
+# llm_transformer = LLMGraphTransformer(llm=chat)
+# graph_documents = llm_transformer.convert_to_graph_documents(documents)
 
-llm_transformer = LLMGraphTransformer(llm=chat)
-graph_documents = llm_transformer.convert_to_graph_documents(documents)
+# # store to neo4j
+# res = kg.add_graph_documents(
+#     graph_documents,
+#     include_source=True,
+#     baseEntityLabel=True,
+# )
 
-# store to neo4j
-res = kg.add_graph_documents(
-    graph_documents,
-    include_source=True,
-    baseEntityLabel=True,
-)
-
+# # MATCH (n) DETACH DELETE n - use this cyper command to delete the Graphs present in neo4j
 
 # Hybrid Retrieval for RAG
 # create vector index
@@ -109,11 +101,14 @@ prompt = ChatPromptTemplate.from_messages(
 )
 entity_chain = prompt | chat.with_structured_output(Entities)
 
-# Test it out:
+# # Test it out:
 # res = entity_chain.invoke(
-#     {"question": "In the year of 123 there was an emperor who did not like to rule."}
+#     {"question": "In the year of 123 there was an emperor who did not like to rule"}
 # ).names
-# # print(res)
+# print(res)
+
+# Who is Ceaser?
+# In the year of 123 there was an emperor who did not like to rule. 
 
 # Retriever
 kg.query("CREATE FULLTEXT INDEX entity IF NOT EXISTS FOR (e:__Entity__) ON EACH [e.id]")
@@ -168,7 +163,7 @@ def structured_retriever(question: str) -> str:
     return result
 
 
-# print(structured_retriever("Who is Octavian?"))
+# print(structured_retriever("Who is Aurelian?"))
 
 
 # Final retrieval step
@@ -243,22 +238,22 @@ chain = (
     | StrOutputParser()
 )
 
-# TEST it all out!
-res_simple = chain.invoke(
-    {
-        "question": "How did the Roman empire fall?",
-    }
-)
-
-print(f"\n Results === {res_simple}\n\n")
-
-# res_hist = chain.invoke(
+# # TEST it all out!
+# res_simple = chain.invoke(
 #     {
-#         "question": "When did he become the first emperor?",
-#         "chat_history": [
-#             ("Who was the first emperor?", "Augustus was the first emperor.")
-#         ],
+#         "question": "How did the Roman empire fall?",
 #     }
 # )
 
-# print(f"\n === {res_hist}\n\n")
+# print(f"\n Results === {res_simple}\n\n")
+
+res_hist = chain.invoke(
+    {
+        "question": "When did he become the first emperor?",
+        "chat_history": [
+            ("Who was the first emperor?", "Augustus was the first emperor.")
+        ],
+    }
+)
+
+print(f"\n === {res_hist}\n\n")
