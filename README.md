@@ -1,41 +1,135 @@
-<!-- @format -->
-# Welcome to The AI Guild 🚀
+# Knowledge Graph RAG System
 
-**This code is a part of a module in our vibrant AI community 🚀[Join the AI Guild Community](https://bit.ly/ai-guild-join), where like-minded entrepreneurs and programmers come together to build real-world AI-based solutions.**
+A comprehensive implementation of Retrieval-Augmented Generation (RAG) systems using knowledge graphs and Neo4j. This repository demonstrates how to build, query, and leverage knowledge graphs for enhanced AI applications.
 
-### What is The AI Guild?
-The AI Guild is a collaborative community designed for developers, tech enthusiasts, and entrepreneurs who want to **build practical AI tools** and solutions. Whether you’re just starting or looking to level up your skills, this is the place to dive deeper into AI in a supportive, hands-on environment.
+## Overview
 
-### Why Join Us?
-- **Collaborate with Like-Minded Builders**: Work alongside a community of individuals passionate about AI, sharing ideas and solving real-world problems together.
-- **Access to Exclusive Resources**: Gain entry to our Code & Template Vault, a collection of ready-to-use code snippets, templates, and AI projects.
-- **Guided Learning Paths**: Follow structured paths, from AI Basics for Builders to advanced classes like AI Solutions Lab, designed to help you apply your knowledge.
-- **Weekly Live Calls & Q&A**: Get direct support, feedback, and guidance during live sessions with the community.
-- **Real-World AI Projects**: Work on projects that make an impact, learn from others, and showcase your work.
+This project showcases different approaches to building and utilizing knowledge graphs for RAG systems:
 
-### Success Stories
-Here’s what some of our members are saying:
-- **"Joining The AI Guild has accelerated my learning. I’ve already built my first AI chatbot with the help of the community!"**
-- **"The live calls and feedback have been game-changers. I’ve implemented AI automation in my business, saving hours each week."**
+1. **Simple Knowledge Graph** - Basic Neo4j implementation for creating and querying knowledge graphs
+2. **Knowledge Graph RAG** - Advanced RAG system using knowledge graphs for structured information retrieval
+3. **Healthcare Knowledge Graph** - Domain-specific implementation for healthcare data
+4. **Text Preparation for RAG** - Tools for preparing and processing text data for RAG systems
 
-### Who is This For?
-If you’re eager to:
-- Build AI tools that solve real problems
-- Collaborate and learn from experienced AI practitioners
-- Stay up-to-date with the latest in AI development
-- Turn your coding skills into actionable solutions
+## Features
 
-Then **The AI Guild** is the perfect fit for you.
+- Neo4j integration for knowledge graph storage and querying
+- LangChain integration for RAG pipeline implementation
+- Entity extraction and relationship mapping
+- Full-text search capabilities
+- Hybrid retrieval combining structured and unstructured data
+- Conversation history handling for contextual responses
+- Domain-specific implementations (healthcare, Roman Empire)
 
-### Frequently Asked Questions
-- **Q: Do I need to be an expert to join?**
-  - **A:** Not at all! The AI Guild is designed for all skill levels, from beginners to advanced developers.
-- **Q: Will I get personalized support?**
-  - **A:** Yes! You’ll have access to live Q&A sessions and direct feedback on your projects.
-- **Q: What kind of projects can I work on?**
-  - **A:** You can start with small projects like chatbots and automation tools, and progress to more advanced AI solutions tailored to your interests.
+## Project Structure
 
-### How to Get Started
-Want to dive deeper and get the full experience? 🚀[Join the AI Guild Community](https://bit.ly/ai-guild-join) and unlock all the benefits of our growing community.
+```
+knowledge-graph-rag/
+├── simple_kg/                  # Basic knowledge graph implementation
+│   └── kg_simple.py            # Simple Neo4j operations
+├── kgraph_rag/                 # Advanced RAG with knowledge graphs
+│   └── roman_emp_graph_rag.py  # Roman Empire knowledge graph RAG
+├── prep_text_for_rag/          # Text preparation tools
+│   └── app.py                  # Text processing application
+├── healthcare/                 # Healthcare domain implementation
+│   ├── health_care_kg.py       # Healthcare knowledge graph
+│   ├── health_care_langchain.py # Healthcare RAG with LangChain
+│   └── healthcare.csv          # Sample healthcare data
+├── requirements.txt            # Project dependencies
+└── .env                        # Environment variables (not tracked in git)
+```
 
-We look forward to seeing what you’ll build with us!
+## Prerequisites
+
+- Python 3.8+
+- Neo4j Aura instance or local Neo4j database
+- OpenAI API key
+
+## Installation
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/Badribn0612/knowledge-graph-rag.git
+   cd knowledge-graph-rag
+   ```
+
+2. Install dependencies:
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+3. Create a `.env` file with your credentials:
+   ```
+   NEO4J_URI=your_neo4j_uri
+   NEO4J_USERNAME=your_neo4j_username
+   NEO4J_PASSWORD=your_neo4j_password
+   AURA_INSTANCENAME=your_aura_instance_name
+   OPENAI_API_KEY=your_openai_api_key
+   ```
+
+## Usage
+
+### Simple Knowledge Graph
+
+```python
+from simple_kg.kg_simple import connect_and_query
+
+# Connect to Neo4j and run a simple query
+connect_and_query()
+```
+
+### Knowledge Graph RAG
+
+```python
+from kgraph_rag.roman_emp_graph_rag import chain
+
+# Ask a question about the Roman Empire
+response = chain.invoke({
+    "question": "Who was the first Roman emperor?",
+})
+
+print(response)
+```
+
+### Healthcare Knowledge Graph
+
+```python
+from healthcare.health_care_langchain import health_care_chain
+
+# Ask a question about healthcare
+response = health_care_chain.invoke({
+    "question": "What are the symptoms of diabetes?",
+})
+
+print(response)
+```
+
+## Key Components
+
+### Knowledge Graph Creation
+
+The system supports multiple approaches to knowledge graph creation:
+- Manual entity and relationship creation
+- Automated extraction from text using LLMs
+- Import from structured data (CSV)
+
+### RAG Implementation
+
+The RAG system combines:
+- Structured data retrieval from the knowledge graph
+- Unstructured data retrieval using vector search
+- Context-aware question answering with conversation history
+
+### Entity Extraction
+
+The system uses LLMs to extract entities from text, which are then stored in the knowledge graph for future retrieval.
+
+## Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request.
+
+## Acknowledgments
+
+- Neo4j for the graph database
+- LangChain for the RAG framework
+- OpenAI for the language models
